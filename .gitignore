@@ -1,0 +1,10 @@
+# Listes des fichiers lourdes et confidentiels à ignorer par Git
+
+#enlever le .env dejà qu'il y a requiremnets.txt
+.env 
+# enlever les fichiers de log
+*.log
+
+# Consider le .gitkeep de /data/raw
+/data/raw/* 
+!/data/raw/.gitkeep
