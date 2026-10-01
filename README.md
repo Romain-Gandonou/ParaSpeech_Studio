@@ -3,7 +3,6 @@
 
 Projet fil rouge du PIIA, Cohorte 2 (Spécial Machine Learning), Académie des Mathématiques Appliquées(AMA).
 
-## But du projet
 
 ## But du projet
 
@@ -14,6 +13,7 @@ ParaSpeech Studio vise à transformer semi-automatiquement un audio ou une vidé
 Le projet ne construit pas un système de traduction ni de reconnaissance vocale : il résout d'abord le problème de la construction et de l'alignement de données bilingues, en passant par l'extraction de l'audio, la segmentation, la génération de paires candidates, un score par apprentissage automatique et une validation humaine.
 
 La langue africaine peu dotée traitée par l'équipe est la langue fon.
+
 ## Statut
 
 Phase 0 (lancement) en cours : mise en place du dépôt, de l'environnement Python et de la structure du projet.
@@ -29,6 +29,11 @@ Mentor
 ## Installation
 
 1. Cloner le dépôt puis se placer dans son dossier.
+Ce dépôt est privé et uniquement ceux qui y ont accès peuvent le cloner.
+```bash
+git clone https://github.com/Romain-Gandonou/ParaSpeech_Studio.git
+```
+
 2. Créer l'environnement virtuel :
 
 ```bash
