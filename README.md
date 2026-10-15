@@ -12,7 +12,8 @@ ParaSpeech Studio vise à transformer semi-automatiquement un audio ou une vidé
 
 Le projet ne construit pas un système de traduction ni de reconnaissance vocale : il résout d'abord le problème de la construction et de l'alignement de données bilingues, en passant par l'extraction de l'audio, la segmentation, la génération de paires candidates, un score par apprentissage automatique et une validation humaine.
 
-La langue africaine peu dotée traitée par l'équipe est la langue fon.
+La langue africaine peu dotée traitée par l'équipe est la langue fon. 
+Dans la suite du projet on peut bien prendre en compte une multitude de langues à faible ressources. 
 
 ## Statut
 
@@ -32,12 +33,13 @@ Mentor
 Ce dépôt est privé et uniquement ceux qui y ont accès peuvent le cloner.
 ```bash
 git clone https://github.com/Romain-Gandonou/ParaSpeech_Studio.git
+cd paraspeech
 ```
 
 2. Créer l'environnement virtuel :
 
 ```bash
-python -m venv .env
+python -m venv .venv
 ```
 
 3. L'activer :
@@ -47,7 +49,7 @@ python -m venv .env
 .env\Scripts\activate
 
 # Linux ou macOS
-source .env/bin/activate
+source .venv/bin/activate
 ```
 
 4. Installer les bibliothèques :
@@ -82,9 +84,9 @@ Les fichiers `.gitkeep` servent uniquement à conserver les dossiers vides dans 
 
 Les données audio et vidéo ne sont pas versionnées dans ce dépôt : elles sont lourdes et leur usage est soumis à des droits. Seul le dossier `data/raw/` est conservé, avec un fichier `.gitkeep`.
 
-[À COMPLÉTER : où et comment récupérer ou déposer les données brutes, et où se trouve la fiche de provenance de chaque source.]
+Les vidéos que nous avons exploitées dans ce projet sont issues du youtube.
 
 ## Conventions
 
 - Nommage des données : [À COMPLÉTER après le travail 2 du guide de la Phase 0]
-- Forme du message des commits : " telle fichier modifier ou telle action effectuer de façon explicite et claire."
+- Forme du message des commits : " telle fichier modifier ou telle action effectuer de façon explicite et claire pour que même après des jours chaque action soit compris."

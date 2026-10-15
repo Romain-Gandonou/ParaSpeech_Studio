@@ -1,10 +1,21 @@
-# Listes des fichiers lourdes et confidentiels à ignorer par Git
+# --- ENVIRONNEMENT VIRTUEL (Dossier) ---
+# Ton dossier contenant les packages Python installés
+.venv/
 
-#enlever le .env dejà qu'il y a requiremnets.txt
-.env 
-# enlever les fichiers de log
+# --- LOGS ET SYSTÈME ---
 *.log
+.DS_Store
 
-# Consider le .gitkeep de /data/raw
-/data/raw/* 
-!/data/raw/.gitkeep
+# --- CODE PYTHON ---
+__pycache__/
+*.pyc
+
+# --- DONNÉES LOURDES ---
+data/raw/*
+!data/raw/.gitkeep
+
+data/processed/audio/*
+!data/processed/audio/.gitkeep
+
+data/processed/segments/*
+!data/processed/segments/.gitkeep
