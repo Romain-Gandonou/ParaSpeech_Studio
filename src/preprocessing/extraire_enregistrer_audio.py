@@ -29,12 +29,13 @@ def inspecter_et_extraire_tout():
                 'langue_interpretation', 'fichier_original', 
                 'duree_s', 'frequence_hz'
             ])
-
+    # On définit la liste des extensions valides (en minuscules)
+    EXTENSIONS_VIDEOS = ('.mp4', '.mkv', '.avi', '.mov', '.flv', '.webm')
     # 3. Parcourir tous les fichiers du dossier data/raw/
     # os.listdir permet de recuperer les fichiers dans le dossier ../data/raw
     for nom_fichier in os.listdir(DOSSIER_RAW): 
         # On ne traite que les fichiers vidéos (ex: .mp4)
-        # if nom_fichier.endswith(".mp4"):
+         if nom_fichier.endswith(EXTENSIONS_VIDEOS):
             
             # Construire les chemins complets
             chemin_video_complete = os.path.join(DOSSIER_RAW, nom_fichier)
@@ -89,7 +90,7 @@ def inspecter_et_extraire_tout():
                     "2026-10-15",       # Date par défaut
                     "Privée",           # Licence
                     "fr",               # Langue source
-                    "fr",               # Langue interprétation
+                    "fon",               # Langue interprétation
                     nom_fichier,        # Nom d'origine (ex: V001.mp4)
                     duree, 
                     frequence
