@@ -46,7 +46,7 @@ python -m venv .venv
 
 ```bash
 # Windows
-.env\Scripts\activate
+.venv\Scripts\activate
 
 # Linux ou macOS
 source .venv/bin/activate
@@ -88,5 +88,29 @@ Les vidéos que nous avons exploitées dans ce projet sont issues du youtube.
 
 ## Conventions
 
-- Nommage des données : [À COMPLÉTER après le travail 2 du guide de la Phase 0]
+## Modèles de nom des fichiers
+
+Chaque type de fichier suit un modèle précis. Le suffixe _v####
+s’incrémente à chaque modification de contenu d’un fichier d’annotation ou de données dérivées ;
+les versions antérieures sont conservées, car une annotation écrasée est une expérience qu’on ne
+peut plus reproduire.
+
+| Type de fichier | Identifiant | Exemple | Dossier |
+|---|---|---|---|
+| Vidéo ou audio brut | S######.ext_d'origine | S0001.mp4 | data/raw/ |
+| Audio extrait | <identifiant  source>.wav| S0001.wav | data/processed/audio/extrait |
+| Audio Normalisé | <identifiant  source>_canaux_frequence.wav | S0001_mono_16k.wav | data/processed/audio/normalise |
+| Segment | <identifiant source>_SEG########.wav | S0001_SEG0001.wav | data/processed/segments/ |
+| Métadonnées d’une source | <identifiant source>_meta.json | S0001_meta.json | data/processed/ |
+| Table des segments | <identifiant source>_segments_v####.csv | S001_segments_v01.csv | 
+Paires candidates
+Annotations manuelles<S######>_pairs_v####.csv
+<S######>_annot_<init>_v####.csvS001_pairs_v01.csv
+S001_annot_pm_v01.csv
+Gold Dataset<S######>_gold_v####.csvS001_gold_v01.csv
+Export du corpuscorpus_fon_fra_v####_<date>.parquetcorpus_fon_fra_v01_20270227.parquet
+Modèle ML<algo>_v####_<date>.jobliblogreg_v01_20261120.joblib
+Notebook####_<sujet>.ipynb01_extraction_audio.ipynb
+
+
 - Forme du message des commits : " telle fichier modifier ou telle action effectuer de façon explicite et claire pour que même après des jours chaque action soit compris."
