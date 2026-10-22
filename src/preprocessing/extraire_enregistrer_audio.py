@@ -3,16 +3,19 @@ import os
 import subprocess
 import json
 import csv
+from pathlib import Path
 
 # Définition des chemins selon l'arborescence officielle de ParaSpeech
-DOSSIER_RAW = "data/raw"
-DOSSIER_AUDIO = "data/processed/audio"
-FICHIER_REGISTRE = "data/processed/videos.csv"
+fichier = Path(__file__).resolve()
+RACINE = fichier.parents[2]
+DOSSIER_RAW = RACINE/"data"/"raw"
+DOSSIER_AUDIO = RACINE/"data"/"processed"/"audio"/"extrait"
+FICHIER_REGISTRE = RACINE/"data"/"processed"/"videos.csv"
 
 def inspecter_et_extraire_tout():
     # 1. S'assurer que les dossiers de sortie existent, sinon on les crée
     os.makedirs(DOSSIER_AUDIO, exist_ok=True)
-    os.makedirs("data/processed", exist_ok=True)
+   # os.makedirs("../data/processed", exist_ok=True)
     
     # 2. Préparer le fichier CSV s'il n'existe pas encore
     # On l'ouvre en mode "a" (append) pour ajouter des lignes sans effacer le reste
@@ -28,9 +31,10 @@ def inspecter_et_extraire_tout():
             ])
 
     # 3. Parcourir tous les fichiers du dossier data/raw/
-    for nom_fichier in os.listdir(DOSSIER_RAW):
+    # os.listdir permet de recuperer les fichiers dans le dossier ../data/raw
+    for nom_fichier in os.listdir(DOSSIER_RAW): 
         # On ne traite que les fichiers vidéos (ex: .mp4)
-        if nom_fichier.endswith(".mp4"):
+        # if nom_fichier.endswith(".mp4"):
             
             # Construire les chemins complets
             chemin_video_complete = os.path.join(DOSSIER_RAW, nom_fichier)
