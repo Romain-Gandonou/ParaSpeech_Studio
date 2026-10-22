@@ -1,2 +1,3 @@
-video_id,titre
-V001,Video de Test
+video_id,provenance,titre,date,licence_ou_autorisation,langue_source,langue_interpretation,fichier_original,duree_s,frequence_hz
+.gitkeep,Inconnue,Sans titre,2026-10-15,Privée,fr,fr,.gitkeep,0,0
+V001,Inconnue,Sans titre,2026-10-15,Privée,fr,fr,V001.mp4,3266.443900,44100
