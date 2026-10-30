@@ -108,7 +108,7 @@ def inspecter_et_extraire_tout():
                     duree, 
                     frequence,
                     fps,
-                    résolution
+                    résolution,
                 ])
                 
             print(f"✅ {video_id} traité et enregistré dans le registre.")
