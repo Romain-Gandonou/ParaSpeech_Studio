@@ -1,2 +1,4 @@
-video_id,provenance,titre,date,licence_ou_autorisation,langue_source,langue_interpretation,fichier_original,duree_s,frequence_hz
-V001,Inconnue,Sans titre,2026-10-15,Privée,fr,fon,V001.mp4,3266.443900,44100
+video_id,provenance,titre,date,licence_ou_autorisation,langue_source,langue_interpretation,fichier_original,duree_s,frequence_hz,fps,resolution
+V002,Inconnue,Sans titre,2026-10-15,Privée,fr,fon,V002.mp4,47.322268,44100,30.0,2160x3840
+V001,Inconnue,Sans titre,2026-10-15,Privée,fr,fon,V001.mp4,3266.443900,44100,30.0,1920x1080
+V003,Inconnue,Sans titre,2026-10-15,Privée,fr,fon,V003.mp4,38.893424,44100,30.0,2160x3840
