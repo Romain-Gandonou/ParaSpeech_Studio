@@ -40,6 +40,18 @@ def inspecter_et_extraire_tout():
             
             # Construire les chemins complets
             chemin_video_complete = os.path.join(DOSSIER_RAW, nom_fichier)
+
+            cap = cv2.VideoCapture(chemin_video_complete)
+            
+            if cap.isOpened():
+                # Obtenir les propriétés
+                fps = cap.get(cv2.CAP_PROP_FPS)
+                total_frames = cap.get(cv2.CAP_PROP_FRAME_COUNT)
+                largeur = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
+                hauteur = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
+                
+            
+                duree = total_frames / fps if fps > 0 else 0    
             
             # Extraire l'identifiant (ex: "V001.mp4" devient "V001")
             video_id = os.path.splitext(nom_fichier)[0]
@@ -94,7 +106,9 @@ def inspecter_et_extraire_tout():
                     "fon",               # Langue interprétation
                     nom_fichier,        # Nom d'origine (ex: V001.mp4)
                     duree, 
-                    frequence
+                    frequence,
+                    fps,
+                    
                 ])
                 
             print(f"✅ {video_id} traité et enregistré dans le registre.")
