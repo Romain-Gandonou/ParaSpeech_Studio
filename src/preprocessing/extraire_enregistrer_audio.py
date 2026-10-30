@@ -49,7 +49,7 @@ def inspecter_et_extraire_tout():
                 total_frames = cap.get(cv2.CAP_PROP_FRAME_COUNT)
                 largeur = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
                 hauteur = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
-                
+                résolution = {int(largeur)}x{int(longueur)}
             
                 duree = total_frames / fps if fps > 0 else 0    
             
@@ -108,7 +108,7 @@ def inspecter_et_extraire_tout():
                     duree, 
                     frequence,
                     fps,
-                    
+                    résolution
                 ])
                 
             print(f"✅ {video_id} traité et enregistré dans le registre.")
