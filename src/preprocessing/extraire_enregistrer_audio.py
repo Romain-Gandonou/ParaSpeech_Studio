@@ -27,7 +27,7 @@ def inspecter_et_extraire_tout():
                 'video_id', 'provenance', 'titre', 'date', 
                 'licence_ou_autorisation', 'langue_source', 
                 'langue_interpretation', 'fichier_original', 
-                'duree_s', 'frequence_hz'
+                'duree_s', 'frequence_hz', 'fps','resolution'
             ])
     # On définit la liste des extensions valides (en minuscules)
     EXTENSIONS_VIDEOS = ('.mp4', '.mkv', '.avi', '.mov', '.flv', '.webm')
