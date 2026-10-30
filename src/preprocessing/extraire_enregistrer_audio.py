@@ -3,7 +3,7 @@ import os
 import subprocess
 import json
 import csv
-iùport cv2
+import cv2
 from pathlib import Path
 
 # Définition des chemins selon l'arborescence officielle de ParaSpeech
