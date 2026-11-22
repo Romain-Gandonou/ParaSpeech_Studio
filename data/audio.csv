@@ -1,0 +1,4 @@
+nom_fichier,chemin_relatif,chemin_graphique,frequence_echantillonnage_hz,duree_secondes,nombre_echantillons,amplitude_max,energie_rms_moyenne
+V001.wav,data/processed/audio/extrait/V001.wav,reports/graphiques/V001_amplitude.png,16000,3266.4439,52263103,1.0,0.19253
+V002.wav,data/processed/audio/extrait/V002.wav,reports/graphiques/V002_amplitude.png,16000,47.3222,757156,0.997742,0.145676
+V003.wav,data/processed/audio/extrait/V003.wav,reports/graphiques/V003_amplitude.png,16000,38.8934,622295,0.999969,0.139014
