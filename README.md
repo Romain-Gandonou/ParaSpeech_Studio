@@ -58,6 +58,56 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+## Architecture du projet
+
+<!-- TREE_START -->
+```text
+paraspeech/
+├── app/
+│   └── .gitkeep
+├── data/
+│   ├── annotations/
+│   │   └── .gitkeep
+│   ├── processed/
+│   │   ├── audio/
+│   │   │   ├── extrait/
+│   │   │   └── normalise/
+│   │   │       └── .gitkeep
+│   │   ├── .gitkeep
+│   │   └── videos.csv
+│   ├── raw/
+│   │   └── .gitkeep
+│   └── audio.csv
+├── notebooks/
+│   ├── .gitkeep
+│   ├── extraire_audio.ipynb
+│   └── signal_visualisation.ipynb
+├── reports/
+│   └── graphiques/
+├── src/
+│   ├── alignment/
+│   │   └── .gitkeep
+│   ├── evaluation/
+│   │   └── .gitkeep
+│   ├── features/
+│   │   └── .gitkeep
+│   ├── models/
+│   │   └── .gitkeep
+│   ├── preprocessing/
+│   │   ├── .gitkeep
+│   │   ├── analyse_audio.py
+│   │   └── extraire_enregistrer_audio.py
+│   └── utils/
+│       └── update_readme.py
+├── tests/
+│   └── .gitkeep
+├── .gitignore
+├── README.md
+└── requirements.txt
+```
+<!-- TREE_END -->
+
+
 ## Organisation du dépôt
 
 ```
