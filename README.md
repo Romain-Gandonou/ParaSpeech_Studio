@@ -108,26 +108,6 @@ paraspeech/
 <!-- TREE_END -->
 
 
-## Organisation du dépôt
-
-```
-paraspeech/
-├── data/
-│   ├── raw/          données brutes, jamais modifiées
-│   ├── processed/    données transformées par le code
-│   └── annotations/  étiquettes faites par des humains
-├── notebooks/        essais et exploration
-├── src/
-│   ├── preprocessing/  préparation de l'audio
-│   ├── features/       caractéristiques calculées sur les segments
-│   ├── alignment/      génération des paires source-interprétation
-│   ├── models/         modèles d'apprentissage
-│   └── evaluation/     mesure de la qualité des résultats
-├── app/              application ParaSpeech Studio
-├── tests/            vérifications automatiques du code
-└── README.md
-```
-
 Les fichiers `.gitkeep` servent uniquement à conserver les dossiers vides dans le dépôt.
 
 ## Données
